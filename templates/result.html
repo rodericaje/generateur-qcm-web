@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fichiers générés</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Fichiers générés :</h1>
+    <ul class="files-list">
+        {% for file in files %}
+            <li>
+                <a href="{{ url_for('download', filename=file.split('/')[-1]) }}" class="download-btn">
+                    {{ file.split('/')[-1] }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/" class="back-btn">Retour</a>
+</div>
+</body>
+</html>

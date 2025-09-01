@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Générateur de QCM</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+<div class="container">
+    <h1>Générateur de QCM</h1>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class="errors">
+          {% for msg in messages %}
+            <li>{{ msg }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <form id="uploadForm" method="post" enctype="multipart/form-data">
+        <div class="file-drop-area" id="fileDrop">
+            <span class="file-msg">Glissez-déposez le fichier .txt ici ou cliquez pour sélectionner</span>
+            <input type="file" name="qcm_file" class="file-input" required>
+        </div>
+
+        <label>Nombre de sujets :</label>
+        <input type="number" name="nb_suj" required>
+
+        <label>Nombre de questions (multiples de 5) :</label>
+        <input type="number" name="nb_qst" required>
+
+        <button type="submit">Générer</button>
+    </form>
+
+    <div id="progressContainer">
+        <div id="progressBar"></div>
+    </div>
+</div>
+
+
+</body>
+</html>

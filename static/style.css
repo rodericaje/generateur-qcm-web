@@ -1,0 +1,99 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+label {
+    display: block;
+    margin-top: 15px;
+    color: #555;
+}
+input[type="number"], button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+button:hover {
+    background-color: #45a049;
+}
+.errors {
+    color: red;
+    list-style: none;
+}
+.file-drop-area {
+    position: relative;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.file-drop-area.hover {
+    border-color: #4CAF50;
+}
+.file-msg {
+    color: #666;
+}
+#progressContainer {
+    width: 100%;
+    background: #eee;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: none;
+}
+#progressBar {
+    width: 0;
+    height: 15px;
+    background: #4CAF50;
+    border-radius: 8px;
+}
+.files-list {
+    list-style: none;
+    padding-left: 0;
+}
+.download-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+.download-btn:hover {
+    background: #45a049;
+}
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
